@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "@heroui/styles"; 
+
+@layer base {
+	body {
+		min-height: 100vh;
+		background-color: #000814;
+		background-image: 
+			radial-gradient(circle at 15% 50%, rgba(139,92,246,0.35) 0, transparent 35%),
+			radial-gradient(circle at 85% 50%, rgba(34,197,94,0.28) 0, transparent 35%),
+			radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.95) 0, transparent 50%),
+			radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.9) 0, transparent 50%),
+			radial-gradient(1px 1px at 70% 30%, rgba(255,255,255,0.85) 0, transparent 50%),
+			radial-gradient(1px 1px at 80% 75%, rgba(255,255,255,0.85) 0, transparent 50%);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+@layer utilities {
+	.animate-slow-bounce {
+		animation: bounce 3s ease-in-out infinite;
+	}
+
+	@keyframes float {
+		0% {
+			transform: translateY(0px) rotate(0deg);
+		}
+		50% {
+			transform: translateY(-18px) rotate(-2deg);
+		}
+		100% {
+			transform: translateY(0px) rotate(0deg);
+		}
+	}
+
+	.animate-float {
+		animation: float 4s cubic-bezier(.25,.46,.45,.94) infinite;
+		will-change: transform;
+	}
+}
