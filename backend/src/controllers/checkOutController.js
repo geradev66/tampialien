@@ -1,5 +1,5 @@
 import axios from "axios";
-import Cart from "../models/Cart.js";
+import Cart from "../models/cart.js";
 import Order from "../models/orders.js";
 
 const getAccessToken = async () => {
