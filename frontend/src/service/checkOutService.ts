@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/checkout';
+const API = `${import.meta.env.VITE_API_URL}/checkout`;
 
 const getToken = () => localStorage.getItem('token');
 

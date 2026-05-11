@@ -1,5 +1,4 @@
-const API = 'http://localhost:3000/productos';
-
+const API = `${import.meta.env.VITE_API_URL}/productos`;
 const getToken  = () => localStorage.getItem('token');
 
 export const getProductsRequest = async () => {
