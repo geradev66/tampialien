@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 async function conectarDB() {
-    const uri = process.env.DB_CONECTION_STRING;
+    const uri = process.env.MONGO_URL;
     await mongoose.connect(uri, {
         tls: true,
         tlsInsecure: true
